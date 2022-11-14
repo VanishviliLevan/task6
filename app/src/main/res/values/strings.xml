@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_from_number_fragment">Hello From Number Fragment</string>
+    <string name="hello_from_home_fragment">Hello From Home Fragment</string>
+    <string name="hello_pow_fragment">Hello Pow Fragment</string>
+    <string name="setting_fragment">Setting Fragment</string>
+</resources>

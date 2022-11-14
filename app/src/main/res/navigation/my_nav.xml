@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapplication.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_powFragment"
+            app:destination="@id/powFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/numberFragment"
+        android:name="com.example.myapplication.NumberFragment"
+        android:label="fragment_number"
+        tools:layout="@layout/fragment_number" >
+        <action
+            android:id="@+id/action_numberFragment_to_powFragment"
+            app:destination="@id/powFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/powFragment"
+        android:name="com.example.myapplication.PowFragment"
+        android:label="fragment_pow"
+        tools:layout="@layout/fragment_pow" >
+        <argument
+            android:name="value"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_powFragment_to_numberFragment2"
+            app:destination="@id/numberFragment" />
+        <action
+            android:id="@+id/action_powFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_powFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.myapplication.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_powFragment"
+            app:destination="@id/powFragment" />
+    </fragment>
+</navigation>
